@@ -1,5 +1,6 @@
 # .zshrc
 ZSH_BASE=$HOME/dotfiles # Base directory for ZSH configuration
+export PATH=/opt/homebrew/bin:$PATH
 
 source ~/.aliases # Source some extra files
 source ~/.functions
