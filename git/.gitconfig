@@ -2,6 +2,7 @@
 	name  = Omar Sotillo Franco
 	email = omarsotillofranco@gmail.com
 	username = omarsotillofranco
+	signingKey = 53FD0F9BA6D16DC1D318B18F1B31734FD5ABC7A7
 	
 [commit]
 	gpgSign = true
@@ -205,3 +206,5 @@
 	theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
+[gpg]
+	program = gpg
