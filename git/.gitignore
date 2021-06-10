@@ -1,6 +1,8 @@
 # For useful .gitignore templates, see here
 # https://github.com/github/gitignore
 
+factorial.key
+factorial.crt
 # +----------------+
 # | RUBY          |
 # +----------------+
