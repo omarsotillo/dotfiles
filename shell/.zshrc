@@ -25,8 +25,6 @@ git checkout "$(git describe --abbrev=0 --tags)"
 [ ! -d $ZSH_BASE/.zplug ] && git clone https://github.com/zplug/zplug $ZSH_BASE/.zplug
 source $ZSH_BASE/.zplug/init.zsh
 
-.$ZSH_BASE/fzf/install
-
 # zplug
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
