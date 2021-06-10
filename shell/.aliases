@@ -1,3 +1,3 @@
 alias t="exa -abgiS --icons --long --git --header -H --classify"
-alias ts="exa --icons -a  --classify"
-alias tso="exa --icons -a --classify --oneline"
+alias tt="exa --icons -a  --classify"
+alias ttt="exa --icons -a --classify --oneline"
