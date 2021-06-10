@@ -1,3 +1,4 @@
-alias t="exa -abgiS --icons --long --git --header -H --classify"
+alias t="exa"
 alias tt="exa --icons -a  --classify"
 alias ttt="exa --icons -a --classify --oneline"
+alias ttt="exa -abgiS --icons --long --git --header -H --classify"
