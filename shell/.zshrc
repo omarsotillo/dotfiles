@@ -5,6 +5,12 @@ export PATH=/opt/homebrew/bin:$PATH
 source ~/.aliases # Source some extra files
 source ~/.functions
 
+# Init ssh agent
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+
+# zoxide init
+eval "$(zoxide init zsh)"
+
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 ZSH_DISABLE_COMPFIX=true
@@ -49,6 +55,7 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
+# THEMES
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_right"
@@ -58,10 +65,13 @@ POWERLEVEL9K_ALWAYS_SHOW_USER=false
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 
-
 # ASDF
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
+
+# zoxide init
+eval "$(zoxide init zsh)"
+
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 compinit
