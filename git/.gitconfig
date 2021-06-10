@@ -20,7 +20,7 @@
 	signingKey = 53FD0F9BA6D16DC1D318B18F1B31734FD5ABC7A7
 	
 [commit]
-	gpgSign = true
+	gpgSign = false
 
 [alias]
 	a = add --all
