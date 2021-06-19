@@ -5,14 +5,28 @@
 
 - clean: ['~']
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
 - link:
     # Shell stuff
     ~/.aliases: shell/.aliases
     ~/.functions: shell/.functions
     ~/.zshrc: shell/.zshrc
+
     # Git
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore: git/.gitignore
 
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
+    # zsh
+    ~/dotfiles/.oh-my-zsh: oh-my-zsh
+    ~/dotfiles/.zplug: zplug 
+
+    # fzf
+    ~/dotfiles/.fzf: fzf 
+    ~/.fzf.bash: shell/.fzf.bash
+    ~/.fzf.zsh: shell/.fzf.zsh
+
+    # Nvim
+    # ~/.config/nvim/init.vim: neovim/init.vim
+
