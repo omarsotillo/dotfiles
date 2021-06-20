@@ -28,5 +28,5 @@
     ~/.fzf.zsh: shell/.fzf.zsh
 
     # Nvim
-    # ~/.config/nvim/init.vim: neovim/init.vim
+    ~/.config/nvim: nvim
 
