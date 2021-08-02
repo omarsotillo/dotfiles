@@ -52,10 +52,10 @@ O = {
     },
     tsserver = {
         -- @usage can be 'eslint'
-        linter = '',
+        linter = 'eslint',
         -- @usage can be 'prettier'
-        formatter = '',
-        autoformat = false,
+        formatter = 'eslint',
+        autoformat = true,
         diagnostics = {virtual_text = {spacing = 0, prefix = ""}, signs = true, underline = true}
     },
     json = {
