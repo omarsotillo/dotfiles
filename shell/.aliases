@@ -2,3 +2,15 @@ alias t="exa"
 alias tt="exa --icons -a  --classify"
 alias ttt="exa --icons -a --classify --oneline"
 alias tttt="exa -abgiS --icons --long --git --header -H --classify"
+
+
+# Function to restore broken ssh-agent session
+# https://coderwall.com/p/_s_xda/fix-ssh-agent-in-reattached-tmux-session-shells
+fixssh() {
+  for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+    if (tmux show-environment | grep "^${key}" > /dev/null); then
+      value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+      export ${key}="${value}"
+    fi
+  done
+}
