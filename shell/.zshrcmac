@@ -1,7 +1,6 @@
 # .zshrc
 ZSH_BASE=$HOME/dotfiles # Base directory for ZSH configuration
-PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-export PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 export TERMINAL=kitty
 
@@ -10,6 +9,9 @@ source ~/.functions
 
 # Init ssh agent
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+
+# zoxide init
+eval "$(zoxide init zsh)"
 
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
@@ -34,6 +36,8 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
+zplug "plugins/osx",      from:oh-my-zsh
+zplug "plugins/brew",     from:oh-my-zsh, if:"which brew"
 zplug "plugins/common-aliase", from:oh-my-zsh
 zplug "plugins/colored-man-pages", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
@@ -66,7 +70,6 @@ POWERLEVEL9K_RPROMPT_ON_NEWLINE=false
 # ASDF
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
-
 # zoxide init
 eval "$(zoxide init zsh)"
 
